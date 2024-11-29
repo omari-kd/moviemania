@@ -1,0 +1,85 @@
+/* Slider container */
+.slider-container {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Sliding background */
+  .big-card-container {
+    background: url("../../../../public/images/houseofthedragon.avif") center center/cover no-repeat;
+    height: 100%;
+    width: 100%;
+    animation: slideBackground 10s linear infinite;
+  }
+  
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 18px;
+    transition: background 0.3s;
+  }
+  
+  .arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  /* Dots for indicators */
+  .dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dot.active {
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  .dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Animation for sliding background */
+  @keyframes slideBackground {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 100% center;
+    }
+  }
+  

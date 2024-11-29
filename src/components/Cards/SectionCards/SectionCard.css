@@ -1,0 +1,105 @@
+.section-card-container {
+    margin-top: 20px;
+    background-color: #17161c;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+
+.section-card-container > h4 {
+    color: #ddd;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 20px;
+    position: relative;
+    top: 35px;
+}
+
+.section-card-container .card-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* To handle smaller screens */
+}
+
+.section-card-container .card-wrapper .cards .card-image1,
+.section-card-container .card-wrapper .cards .card-image2,
+.section-card-container .card-wrapper .cards .card-image3,
+.section-card-container .card-wrapper .cards .card-image4 {
+    width: 15vw;
+    height: 45vh;
+    margin: 15px;
+    background-color: #f1f1f1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    filter: blur(0.5px);
+    opacity: 0.8;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.section-card-container .card-wrapper .cards .card-image1:hover,
+.section-card-container .card-wrapper .cards .card-image2:hover,
+.section-card-container .card-wrapper .cards .card-image3:hover,
+.section-card-container .card-wrapper .cards .card-image4:hover {
+    filter: blur(0px);
+    opacity: 1;
+} 
+
+
+/* Text Styles */
+.section-card-container .card-wrapper .cards h4 {
+    /* border: 2px solid red; */
+    position: relative;
+    top: 12vw;
+    color: #ddd;
+}
+
+/* View All */
+.section-card-container .card-wrapper .cards #card-image-view-all {
+    width: 10vw;
+    height: 10vh;
+    margin: 10px;
+    position: relative;
+    top:30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #463f79;
+    font-size: 1.2rem;
+    border-radius: 4px;
+}
+
+.section-card-container .card-wrapper .cards #card-image-view-all  a {
+    text-decoration: none;  
+    color: #fff;
+}
+
+.section-card-container .card-wrapper .cards #card-image-view-all:hover {
+    background-color: #514889;
+}
+
+
+/* Image */
+.section-card-container .card-wrapper .card-image1 {
+    background-image: url("../../../../public/images/strangerthings.jpg");
+}
+
+.section-card-container .card-wrapper .card-image2 {
+    background-image: url("../../../../public/images/deadpoolandwolverine2.jpg");
+}
+
+.section-card-container .card-wrapper .card-image3 {
+    background-image: url("../../../../public/images/houseofthedragon.avif");
+}
+
+.section-card-container .card-wrapper .card-image4 {
+    background-image: url("../../../../public/images/houseofthedragon.jpeg");
+}
