@@ -1,7 +1,7 @@
-
+/* Navbar Styles */
 .navbar {
     background-color: #141319;
-    height:40px;
+    height: auto;
     align-items: center;
     font-size: 1rem;
     position: sticky;
@@ -9,90 +9,108 @@
     z-index: 999;
     padding: 10px;
     margin: 0;
-}
-
-.navbar nav {
+  }
+  
+  .navbar nav {
     display: flex;
     justify-content: space-between;
-    /* border: red solid;
-    border-width: 2px; */
-    margin-top: 5px;
     align-items: center;
-    
-}
-.navbar nav > a {
-    position: relative;
-    bottom:50%;
-    align-items: center;
-}
-
-.navbar .nav-links {
-    position:relative ;
-    left: 15%;
-}
-
-.navbar .nav-links a {
-    margin-right:40px;
+  }
+  
+  .navbar .nav-links a {
+    margin-right: 40px;
     text-decoration: none;
     color: #ddd;
-}
-
-.navbar .nav-links a:hover{
+  }
+  
+  .navbar .nav-links a:hover {
     color: #514889;
-}
-
-.mania {
+  }
+  
+  .mania {
     color: #fff;
-}
-
-.mania:hover{
+  }
+  
+  .mania:hover {
     color: #514889;
-}
-.logout-button {
-    position: relative;
-    right:200%;
-}
-
-.logout-button button {
+  }
+  
+  /* Menu */
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #ddd;
+  }
+  
+  .menu a:hover {
+    color: #514889;
+  }
+  
+  .logout-button button {
     background-color: #514889;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;    
-}
-
-.logout-button button a{
+    padding: 5px 10px;
+  }
+  
+  .logout-button button a {
     text-decoration: none;
-    color: #fff
-}
-
-.logout-button button:hover {
+    color: #fff;
+  }
+  
+  .logout-button button:hover {
     background-color: #463f79;
-}
-
-
-/* Media Queries */
-
-/* For screens smaller than 768px */
-/* @media screen and (max-width: 856px) {
-    .navbar nav {
-        flex-direction: column;
-        align-items: center;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: #ddd;
+  }
+  
+  /* Media Queries */
+  
+  /* For screens smaller than 768px */
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+      background-color: #141319;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 10px 0;
     }
-
-    .navbar .nav-links {
-        position: relative;
-        left: 0;
-        margin-top: 10px;
+  
+    .menu.open {
+      display: flex;
     }
-
-    .logout-button {
-        position: relative;
-        right: 0;
-        margin-top: 10px;
+  
+    .hamburger-icon {
+      display: flex;
     }
-}    */
+  
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  

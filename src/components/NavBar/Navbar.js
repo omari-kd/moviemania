@@ -1,29 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import "../../App.css";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="navbar">
       <div className="nav-wrapper">
         <nav>
           <div className="nav-links">
-            <a href="/">
+            <a href="/" className="brand-logo">
               Movie<span className="mania">Mania</span>
             </a>
+          </div>
+          <div className={`menu ${menuOpen ? "open" : ""}`}>
             <a href="#">Films</a>
             <a href="#">Tv Shows</a>
             <a href="#">Animations</a>
-          </div>
-
-          <div className="nav-links-right">
-            <div className="search-icon">
-              {/* <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> */}
-            </div>
             <div className="logout-button">
               <button>
                 <a href="#">Logout</a>
               </button>
             </div>
+          </div>
+          <div className="hamburger-icon" onClick={toggleMenu}>
+            <span className="line"></span>
+            <span className="line"></span>
+            <span className="line"></span>
           </div>
         </nav>
       </div>

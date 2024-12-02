@@ -6,11 +6,12 @@ import SmallCards from "../../components/Cards/Carditems/SmallCards";
 import SectionCard from "../../components/Cards/SectionCards/SectionCard";
 import Footer from "../../components/Footer/Footer";
 import useMoviesData from "../../hooks/useMoviesData";
+import Loading from "../../components/LoadingIndicator/Loading";
 
 export default function Mainpage() {
   const { isLoading, movies, errorMessage } = useMoviesData();
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loading />;
   if (errorMessage) return <div>{errorMessage}</div>;
 
   const categories = [

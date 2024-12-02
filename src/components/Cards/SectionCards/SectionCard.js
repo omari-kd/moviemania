@@ -10,7 +10,11 @@ export default function SectionCard({ heading, movies }) {
       <h4>{heading}</h4>
       <div className="card-wrapper">
         {movies.slice(0, 4).map((movie, index) => (
-          <div key={index} className="cards">
+          <div
+            key={index}
+            className="cards"
+            onClick={() => (window.location.href = `/movie/${movie.id}`)}
+          >
             <div
               className={`card-image${index + 1}`}
               style={{

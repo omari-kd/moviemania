@@ -1,43 +1,87 @@
 .category-header {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.category-header h1 {
+  color: #ddd;
+  font-size: 2rem; /* Default font size */
+}
+
+/* Movie Cards Layout */
+.movie-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card-container {
+  padding: 20px;
+}
+
+.card-container .card {
+  background-color: #333;
+  width: 200px; /* Default card width */
+  height: 300px; /* Default card height */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-container .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-container .card-title small {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+/* For tablets and small laptops */
+@media (max-width: 768px) {
   .category-header h1 {
-    color: #ddd;
+    font-size: 1.5rem; /* Adjust header font size */
   }
-  
-  .movie-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .card-container {
-    padding: 20px;
-  }
-  
+
   .card-container .card {
-    background-color: #333;
-    width: 200px;
-    height: 300px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    width: 150px; /* Smaller card width for tablets */
+    height: 225px; /* Adjust card height proportionally */
   }
-  
+
   .card-container .card-title small {
-    color: #fff;
-    font-size: 1rem;
-    text-align: center;
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
   }
-  
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .category-header h1 {
+    font-size: 1.2rem; /* Further reduce header font size */
+  }
+
+  .card-container .card {
+    width: 90%; /* Full-width cards on mobile */
+    height: auto; /* Auto height to maintain proportions */
+  }
+
+  .card-container {
+    padding: 10px; /* Reduce padding for better spacing */
+  }
+
+  .card-container .card-title small {
+    font-size: 0.8rem; /* Smaller font size for mobile */
+  }
+}
