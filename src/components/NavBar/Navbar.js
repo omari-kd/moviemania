@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="nav-wrapper">
         <nav>
           <div className="nav-links">
-            <a href="#">
+            <a href="/">
               Movie<span className="mania">Mania</span>
             </a>
             <a href="#">Films</a>

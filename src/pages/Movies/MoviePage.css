@@ -1,0 +1,43 @@
+.category-header {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .category-header h1 {
+    color: #ddd;
+  }
+  
+  .movie-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .card-container {
+    padding: 20px;
+  }
+  
+  .card-container .card {
+    background-color: #333;
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card-container .card-title small {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+  }
+  

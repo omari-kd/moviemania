@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="footer-container">
       <div className="footer-wrapper">
         <div className="footer-title">
-          <h1>
+          <h1 onClick={() => (window.location.href = "/")}>
             Movie<span>Mania</span>
           </h1>
         </div>

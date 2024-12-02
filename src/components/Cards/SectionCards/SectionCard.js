@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import "./SectionCard.css";
 
@@ -22,7 +23,17 @@ export default function SectionCard({ heading, movies }) {
         ))}
         <div className="cards">
           <div id="card-image-view-all">
-            <a href="#">View All</a>
+            <Link
+              to={{
+                pathname: "/movies"
+              }}
+              state={{
+                heading,
+                movies
+              }}
+            >
+              View All
+            </Link>
           </div>
         </div>
       </div>
