@@ -8,7 +8,9 @@ import {
   fetchRequestComedy,
   fetchRequestAction,
   fetchRequestDrama,
-  fetchRequestSciFi
+  fetchRequestSciFi,
+  fetchRequestRecommended,
+  fetchRequestTrailer
 } from "../../src/functions/apis/fetch";
 
 const useMoviesData = () => {
@@ -23,7 +25,9 @@ const useMoviesData = () => {
     comedy: [],
     action: [],
     drama: [],
-    sciFi: []
+    sciFi: [],
+    recommended: [],
+    trailer: []
   });
 
   useEffect(() => {
@@ -38,7 +42,9 @@ const useMoviesData = () => {
           comedyData,
           actionData,
           dramaData,
-          sciFiData
+          sciFiData,
+          recommendedData,
+          trailerData
         ] = await Promise.all([
           fetchRequestPopular(),
           fetchRequestTopRated(),
@@ -48,7 +54,9 @@ const useMoviesData = () => {
           fetchRequestComedy(),
           fetchRequestAction(),
           fetchRequestDrama(),
-          fetchRequestSciFi()
+          fetchRequestSciFi(),
+          fetchRequestRecommended(),
+          fetchRequestTrailer()
         ]);
 
         setMovies({
@@ -60,7 +68,9 @@ const useMoviesData = () => {
           comedy: comedyData?.results || [],
           action: actionData?.results || [],
           drama: dramaData?.results || [],
-          sciFi: sciFiData?.results || []
+          sciFi: sciFiData?.results || [],
+          recommended: recommendedData?.results || [],
+          trailer: trailerData?.results || []
         });
       } catch (error) {
         setErrorMessage("Failed to fetch movie data.");

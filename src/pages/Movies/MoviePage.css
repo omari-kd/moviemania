@@ -47,7 +47,42 @@
   font-size: 1rem;
   text-align: center;
 }
+.card-container .card-title{
+  margin-top: 2vh;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* border: 2px solid red; */
+}
 
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-container  #previous{
+  padding: 10px 15px;
+  margin-right: 10px;
+  border:none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.pagination-container #next {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border:none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.pagination-container span {
+  color: #ddd;
+}
 /* Responsive Design */
 
 /* For tablets and small laptops */

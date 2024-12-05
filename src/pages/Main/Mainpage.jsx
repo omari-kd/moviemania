@@ -29,6 +29,8 @@ export default function Mainpage() {
       <BigCard />
       <SmallCards categories={categories} />
       <div className="main-content">
+        <SectionCard heading="Recommended" movies={movies.recommended} />
+        <SectionCard heading="Trailer" movies={movies.trailer} />
         <SectionCard heading="Popular" movies={movies.popular} />
         <SectionCard heading="Top Rated" movies={movies.topRated} />
         <SectionCard heading="Upcoming" movies={movies.upcoming} />
