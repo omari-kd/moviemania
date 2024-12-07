@@ -10,6 +10,11 @@
     padding: 10px;
     margin: 0;
   }
+  .navbar .brand-logo {
+    font-size: 1.2rem;
+    margin-left: 2vw;
+    font-weight: bolder;
+  }
   
   .navbar nav {
     display: flex;
@@ -68,6 +73,44 @@
   .logout-button button:hover {
     background-color: #463f79;
   }
+
+
+  .search-results {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #141319;
+    border-radius: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .movie-item {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1f1e25;
+  }
+  
+  .movie-item h4 {
+    margin: 0 0 5px;
+  }
+  
+  .movie-item p {
+    margin: 0 0 10px;
+  }
+  
+  .movie-item small {
+    color: #aaa;
+  }
+  
   
   /* Hamburger Icon */
   .hamburger-icon {
@@ -83,6 +126,8 @@
     background-color: #ddd;
   }
   
+
+
   /* Media Queries */
   
   /* For screens smaller than 768px */
