@@ -12,12 +12,12 @@ export default function Signin() {
         <h2>Sign In</h2>
         <form action="#" autoComplete="off">
           <div className="form-control">
-            <input type="text" placeholder="Email or Phone number" required />
+            <input type="text" placeholder="Email" required />
           </div>
           <div className="form-control">
             <input type="password" placeholder="Password" required />
           </div>
-          <button>Sign In</button>
+          <button className="sign-in-button">Sign In</button>
           <div className="form-help">
             <div className="remember-me">
               <input type="checkbox" id="remember-me" />
@@ -27,7 +27,7 @@ export default function Signin() {
           </div>
         </form>
         <p>
-          New to MovieMania? <a href="#">Sign up now</a>
+          New to MovieMania? <a href="/">Sign up now</a>
         </p>
         <small>
           This page is protected by Google reCaptcha to ensure you are not a

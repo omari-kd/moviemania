@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+.signin-container {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: #000
+  }
+  
+  .signin-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    background: url("../../../public/images/movie-poster.jpg");
+    background-position: center;
+  }
+  
+
+.signin-container nav {
+    position: fixed;
+    padding: 25px 60px;
+}
+.signin-container nav a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #514889;
+    font-weight: bolder;
+}
+
+
+.form-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width : 300px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+}
+
+.form-wrapper h2 { 
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form-wrapper form {
+    margin: 25px 0 65px;
+}
+
+form .form-control {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-control input {
+    height: 100%;
+    width: 88%;
+    background: #333;
+    border:none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+
+.form-control input:is(focus, :valid) {
+    background:#444;
+    padding: 16px 20px 0;
+}
+
+
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    background: #65061e;
+    color: #fff;  
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+form button:hover {
+    background: #800020;
+}
+
+.form-wrapper a {
+    text-decoration: none;
+}
+
+.form-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.form-wrapper :where(label,small, p, a){
+    color: #b3b3b3;
+}
+
+form .form-help {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .remember-me {
+    display: flex;
+}
+
+form .remember-me input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+form .form-help :where(label ,a){
+    font-size: 0.9rem;
+}
+
+.form-wrapper p a {
+    color: #fff;
+}
+
+.form-wrapper small {
+    display: block;
+    margin-top: 15px;
+    color: #b3b3b3;
+}
+
+.form-wrapper small a {
+    color: #0071eb;
+    /* color: #c40812; */
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 854px) {
+
+    nav .form-wrapper{
+        padding:20px;
+    }
+
+    nav { 
+        padding: 15px;
+    }
+    nav a{
+        font-size: 25px;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        top: 43%;
+    }
+
+    .form-wrapper form {
+        margin: 25px 0 45px;
+    }
+}

@@ -3,6 +3,7 @@ import "./Navbar.css";
 import "../../App.css";
 import Loading from "../LoadingIndicator/Loading";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,6 +39,16 @@ export default function Navbar() {
         setError("Failed to fetch movies. Please try again.");
         setLoading(false);
       });
+  };
+
+  //logout function
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem(sessionStorage);
+
+    //redirect to signin page
+    navigate("/signin");
   };
 
   return (
@@ -83,7 +94,7 @@ export default function Navbar() {
             </div>
 
             <div className="logout-button">
-              <button>
+              <button onClick={handleLogout}>
                 <a href="#">Logout</a>
               </button>
             </div>
