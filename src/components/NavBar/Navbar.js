@@ -46,10 +46,12 @@ export default function Navbar() {
 
   const handleLogout = () => {
     localStorage.removeItem(sessionStorage);
-
+    setLoading(true);
     //redirect to signin page
     navigate("/signin");
   };
+
+  if (loading) return <Loading />;
 
   return (
     <div className="navbar">
