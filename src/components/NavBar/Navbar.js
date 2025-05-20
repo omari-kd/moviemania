@@ -95,11 +95,11 @@ export default function Navbar() {
               </button>
             </div>
 
-            <div className="logout-button">
+            {/* <div className="logout-button">
               <button onClick={handleLogout}>
                 <a href="#">Logout</a>
               </button>
-            </div>
+            </div> */}
           </div>
           <div className="hamburger-icon" onClick={toggleMenu}>
             <span className="line"></span>
